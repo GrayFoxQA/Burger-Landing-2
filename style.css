@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /*подключение шрифта*/
+
+/*Общие стили*/
+
+body {
+    margin: 0%; /*убирает отступы вокруг страницы*/
+    font-family: 'Roboto', sans-serif; /*шрифт текста*/
+    background-color: #1c1c1c; /*цвет фона*/
+    color: #fff; /*цвет текста*/
+}
+
+a {
+    color: #fff; /*цвет ссылок*/
+    text-decoration: none; /*убирает подчеркивание ссылок*/
+}
+
+p {
+    margin: 0%; /*убирает отступы вокруг текста*/
+}
+
+p + p {
+    margin-top: 15px; /*отступ сверху если абзац идет за абзацем*/
+}
+
+ul {
+    list-style: none; /*убирает маркеры списка*/
+    padding: 0; /*убирает отступы вокруг списка*/
+    margin: 0; /*убирает отступы вокруг списка*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500; /*жирность текста*/
+    margin: 0%;/*убирает отступы вокруг текста*/
+}
+
+img {
+    max-width: 100%; /*максимальная ширина изображения*/
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1170px; /*максимальная ширина контейнера*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px; /*отступы внутри контейнера*/
+}
+
+/*Кнопка*/
+
+.btn {
+    display: flex; /*распределение элементов в строку*/
+    align-items: center; /*распределение элементов по высоте*/
+    justify-content: center; /*распределение элементов по ширине*/
+    font-weight: 500; /*жирность текста*/
+    font-size: 16px; /*размер шрифта*/
+    width: 165px; /*ширина кнопки*/
+    height: 50px; /*высота кнопки*/
+    background-color: #F6762C; /*цвет кнопки*/
+    border-radius: 5px; /*радиус закругления углов*/
+    transition: opacity 0.3s; /*плавное изменение прозрачности*/
+}
+
+.btn:hover {
+    opacity: 0.8; /*прозрачность кнопки при наведении*/
+}
+
+/*Шапка сайта*/
+
+.header {
+    padding: 25px 0; /*отступы внутри шапки*/
+}
+
+.header .container {
+    display: flex; /*распределение элементов в строку*/
+    justify-content: space-between; /*распределение элементов по ширине*/
+    align-items: center; /*распределение элементов по высоте*/
+}
+
+.header_list {
+    display: flex; /*распределение элементов в строку*/
+    gap: 30px; /*расстояние между элементами*/
+}
+
+.header_nav a {
+    font-size: 14px; /*размер шрифта*/
+    opacity: 0.7; /*прозрачность текста*/
+    transition: opacity 0.3s; /*плавное изменение прозрачности*/
+}
+
+.header_nav a.active {
+    opacity: 1; /*прозрачность текста*/
+}
+
+.header_nav a:hover {
+    opacity: 0.9; /*прозрачность текста при наведении*/
+}
+
+/*Основная секция*/
+
+.welcome {
+    box-sizing: border-box; /*ширина и высота элемента включая padding и border*/
+    min-height: 100vh; /*минимальная высота блока*/
+    margin-top: -100px; /*отступ сверху*/
+    padding: 380px 0; /*отступы внутри блока*/
+    background-image: url(images/welcome-bg.jpg);
+    background-repeat: no-repeat; /*запрет повторения фонового изображения*/
+    background-size: cover; /*растягивание фонового изображения*/
+    background-position: center; /*позиция фонового изображения*/
+}
+
+.welcome_text {
+    width: 550px; /*ширина блока*/ 
+}
+
+.welcome_subtitle {
+    font-size: 14px; /*размер шрифта*/
+    letter-spacing: 0.1em; /*расстояние между буквами*/
+    opacity: 0.7; /*прозрачность текста*/
+    margin-bottom: 7px; /*отступ снизу*/
+}
+
+.welcome_title {
+    font-size: 58px; /*размер шрифта*/
+}
+
+.welcome_desc {
+    font-size: 18px; /*размер шрифта*/
+    opacity: 0.7; /*прозрачность текста*/
+    margin: 40px 0; /*отступы вокруг текста*/
+}
+
+/*Меню*/
+
+.food-list {
+    padding: 100px 0; /*отступы внутри блока*/
+}
+
+.food-list .container {
+    display: flex; /*распределение элементов в строку*/
+    justify-content: space-between; /*распределение элементов по ширине*/
+    flex-wrap: wrap; /*перенос элементов на новую строку*/
+    gap: 40px 10px; /*расстояние между элементами*/
+}
+
+.food-list_card {
+    width: 260px; /*ширина блока*/
+    background: #312F30;
+    border-radius: 10px; /*радиус закругления углов*/
+    overflow: hidden; /*обрезание содержимого*/
+    text-align: center; /*выравнивание текста по центру*/
+}
+
+.food-list_img {
+    width: 100%; /*ширина блока*/
+    height: 175px; /*высота блока*/
+    object-fit: cover; /*растягивание изображения*/
+    transition: all 500ms ease;
+}
+
+.food-list_img:hover {
+    transform: scale(1.1); /*увеличение изображения при наведении*/
+}
+
+.food-list_text-wrapper {
+    padding: 30px 20px; /*отступы внутри блока*/
+}
+
+.food-list_title {
+    font-size: 20px; /*размер шрифта*/
+    margin-bottom: 13px; /*отступ снизу*/
+}
+
+.food-list_desc {
+    font-size: 16px; /*размер шрифта*/
+    opacity: 0.7; /*прозрачность текста*/
+}
+
+/*Секция заказа бургера*/
+
+.order {
+    background: #312F30;
+    padding: 60px 0;
+}
+
+.order .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 90px;
+}
+
+.order_img {
+    max-width: 470px;
+}
+
+.order_text {
+    max-width: 360px;
+}
+
+.order_title {
+    margin-bottom: 25px;
+    font-size: 44px;
+}
+
+.order_desc {
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.order_price {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #F6762C;
+}
+
+.order_old-price {
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-decoration-line: line-through;
+    color: #F6762C;
+    opacity: 0.5;
+}
+
+.order_price + .order_price {
+    margin-left: 4px;
+}
+
+.order .btn {
+    margin-top: 10px;
+}
+
+/*Секция карточек для заказа*/
+
+.product {
+    padding: 150px 0;
+}
+
+.product .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product_card {
+    box-sizing: border-box;
+    width: 555px;
+    min-height: 300px;
+    padding: 60px 0 60px 290px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product_card:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 250px;
+}
+
+.product_title {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.product_desc {
+    width: 250px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.product_price {
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #F6762C;
+}
+
+.product_price + .product_price {
+    margin-left: 4px;
+}
+
+.product_price--old {
+    text-decoration-line: line-through;
+    opacity: 0.5;
+}
+
+.product .btn {
+    margin-top: 10px;
+}
+
+.btn--small {
+    font-size: 12px; /*размер шрифта*/
+    width: 140px; /*ширина кнопки*/
+    height: 40px; /*высота кнопки*/
+}
+
+.card-queen {
+    background-image: url(images/product-1.jpg);
+    background-repeat: no-repeat;
+}
+
+.card-hut {
+    background-image: url(images/product-2.jpg);
+    background-repeat: no-repeat;
+}
+
+.card-king {
+    background-image: url(images/product-3.jpg);
+    background-repeat: no-repeat;
+}
+
+.card-papa {
+    background-image: url(images/product-4.jpg);
+    background-repeat: no-repeat;
+}
+
+/*Секция Feedback*/
+
+.feedback {
+    padding-bottom: 200px;
+}
+
+.feedback .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 880px;
+}
+
+.feedback_text {
+    margin: 0;
+    max-width: 370px;
+    text-align: center;
+}
+
+.feedback_text::before {
+    content: url(images/icons/quote.svg);
+}
+
+.feedback_desc {
+    opacity: 0.7;
+    margin: 30px 0;
+}
+
+.feedback_author {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    display: block;
+}
+
+.feedback_subtext {
+    font-weight: 500;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/*Секция Download*/
+
+.download {
+    background: #312F30;
+    padding: 60px 0;
+}
+
+.download .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+}
+
+.download_title {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/*Footer*/
+
+.footer a {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+}
+  
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+  
+.footer .footer__title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+  
+.footer .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 125px;
+    margin-bottom: 140px;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer__logo {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+.footer__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer__link + .footer__link {
+    margin-top: 10px;
+}
+
+.footer__link::before {
+    width: 12px;
+    height: 12px;
+}
+  
+.footer__link-mail::before {
+    content: url("./images/icons/mail.svg");
+}
+
+.footer__link-web::before {
+    content: url("./images/icons/global.svg");
+}
+  
+.footer__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__list-item + .footer__list-item {
+    margin-top: 15px;
+}
+  
+.footer__socials-link + .footer__socials-link {
+    margin-left: 7px;
+}
+
+/*Адаптация*/
+
+@media (max-width: 1100px) {
+    .welcome_desc {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 950px) {
+    .order .container {
+        flex-direction: column;
+        padding-right: 15px;
+    }
+
+    .order_text {
+        text-align: center;
+    }
+
+    .order .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .food-list .container {
+        justify-content: space-evenly;
+    }
+
+    .footer .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "nav nav"
+                             "contacts socials";
+        justify-items: center;
+        gap: 40px 150px;
+    }
+
+    .footer__contacts {
+        grid-area: contacts;
+        justify-self: end;
+    }
+
+    .footer__nav {
+        grid-area: nav;
+    }
+
+    .footer__socials {
+        grid-area: socials;
+        align-self: center;
+        justify-self: start;
+    }
+
+    .footer__list {
+        gap: 80px;
+    }
+
+    .feedback {
+        padding-bottom: 100px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .header .btn {
+        display: none;
+    }
+
+    .feedback__img {
+        width: 200px;
+    }
+
+    .download__title {
+        font-size: 24px;
+    }
+
+    .welcome {
+        padding: 150px 0 100px;
+        min-height: initial;
+    }
+
+    .welcome__text {
+        width: 100%;
+    }
+
+    .welcome__title {
+        font-size: 40px;
+    }
+
+    .welcome__desc {
+        margin: 20px 0;
+    }
+
+    .product {
+        padding: 60px 0 100px;
+    }
+
+    .product__card {
+        width: 100%;
+        padding-left: 50%;
+    }
+}
