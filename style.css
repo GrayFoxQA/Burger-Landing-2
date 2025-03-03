@@ -484,6 +484,9 @@ img {
                              "contacts socials";
         justify-items: center;
         gap: 40px 150px;
+
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .footer__contacts {
@@ -533,6 +536,11 @@ img {
 
     .feedback__img {
         width: 200px;
+    }
+
+    .feedback .container {
+        flex-direction: column;
+        align-items: center;  
     }
 
     .download__title {
